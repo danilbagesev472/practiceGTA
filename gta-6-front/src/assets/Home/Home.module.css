@@ -1,0 +1,49 @@
+.wrapper {
+	@apply w-screen min-h-screen relative;
+}
+.wrapper > form {
+	@apply w-max absolute left-40 top-80;
+	animation: slideIn 2s ease-in-out;
+}
+.wrapper > form > h1 {
+	@apply text-4xl mb-4 text-white;
+}
+.wrapper > form > input {
+	@apply block mb-5 px-3 py-1 bg-black/70 w-full border-transparent placeholder:text-gray-500 text-white outline-none;
+	transition: border-color 0.3s linear;
+}
+.wrapper > form > input:focus {
+	@apply border border-red-400;
+}
+
+.wrapper > form > button {
+	@apply border border-white text-white px-4 py-1.5 inline-block bg-transparent;
+	transition: box-shadow 0.2s linear, background-color 0.2s linear;
+}
+.wrapper > form > button:hover {
+	@apply bg-white/15;
+}
+
+.succsess {
+	@apply absolute left-6 top-20 text-3xl text-green-700 m-auto font-medium;
+	animation: fade 0.4s ease-in-out;
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateX(-240px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
